@@ -19,6 +19,10 @@ let cicloVida = document.getElementById("cicloVida")
 let totalPonderado = document.getElementById("puntuacionIdea")
 let mensajePonderacion = document.getElementById("mensajeponderacion")
 
+let botonContinuaridea=document.getElementById("botonseguiridea")
+let botonPararIdea=document.getElementById("botonnoseguiridea")
+let mensajeFinalIdea=document.getElementById("mensajefinalidea")
+
 
 //fecha del sistema
 let fechaSistema = new Date().toISOString().slice(0, 10);
@@ -93,11 +97,38 @@ function validarPonderacion() {
 }
 
 
+let botonPuerta2=document.getElementById("botonpuerta2")
+
+//seguir idea
+botonContinuaridea.addEventListener("click",function(){
+    mensajeFinalIdea.classList.remove("d-none")
+    mensajeFinalIdea.textContent="Es un gran logro haber registrado con éxito tu idea de innovación. Esto marca el comienzo de un emocionante viaje hacia la creación y desarrollo de algo único y valioso. Tu creatividad y visión nos inspiran a todos"
+    botonPuerta2.disabled=false
+
+})
+
+//no seguir idea
+botonPararIdea.addEventListener("click",function(){
+    mensajeFinalIdea.classList.remove("d-none")
+    mensajeFinalIdea.textContent="La innovación a menudo implica experimentar y aprender de los resultados, y tu contribución es valiosa. No te desanimes. Continúa buscando oportunidades y explorando nuevas ideas. El camino hacia la innovación puede tener desafíos, pero cada paso te acerca más a tus objetivos"
+    botonPuerta2.disabled=true
+
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
 //rutina pdf
-let boton = document.getElementById("botonpdfidea")
+/*let boton = document.getElementById("botonpdfidea")
 boton.addEventListener("click", function () {
 
     // Tu objeto JSON
@@ -141,4 +172,4 @@ boton.addEventListener("click", function () {
     pdfMake.createPdf(documentDefinition).download('tabla.pdf');
 
 
-})
+})*/
