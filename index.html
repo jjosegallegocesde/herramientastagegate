@@ -9,6 +9,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -22,25 +23,45 @@
                 <div class="col-12 col-md-8">
                     <h2>Herramienta tecnológica</h2>
                     <h3>Modelo Stage Gate</h3>
-                    <h5>Wilmer Londoño&copy;-Juan José Gallego&copy;</h5>
-                    <h6>Maestria gestión de la innovación tecnológica cooperación y desarrollo regional</h6>
-                    <h6>ITM-2023</h6>
                 </div>
             </div>
 
+            <div class="row my-3 justify-content-center">
+                <div class="col-12 col-md-5 text-center">
+                    <img src="./assets/img/superheroe.png" alt="" class="img-fluid">
+                    <p class="">
+                        Soy <span class="fw-bold">ideaMan</span>, una herramienta para validar siguiendo la
+                        metodología Stage-Gate la viabilidad de desarrollar nuevos productos de forma eficiente y efectiva.
+                    </p>
+                    <p class="animate__animated animate__backInLeft">
+                        <i class="bi bi-caret-right-fill"></i>Para utilizar la herramienta debes hacer clic en comenzar
+                        <span class="fw-bold">e ir pasando por cada una de las etapas</span>.
+                    </p>
+    
+                    <p class="mt-2 animate__animated animate__backInRight">
+                        <i class="bi bi-caret-right-fill"></i>Recuerda que <span class="fw-bold">debes aprobar ("abrir la puerta") </span> de una etapa
+                        para poder continuar a la siguiente
+                    </p>
+                </div>
+
+                
+
+
+
+            </div>
 
             <div class="row my-2 justify-content-center text-center shadow card">
                 <div class="col-12 p-4">
-                    <h4>Puerta 1: Conceptualización / Idea</h4>
-                    <img src="./assets/img/idea.png" alt="idea" class="img-fluid mt-2">
+                    <h4>Inicio: Conceptualización de la idea</h4>
+                    <img src="./assets/img/experimento.png" alt="idea" class="img-fluid mt-2">
                     <p>
-                        En esta etapa, se genera y evalúa la idea del proyecto. Se busca determinar si la idea se alinea
-                        con los objetivos estratégicos de la organización y si vale la pena explorarla más a fondo. Se
-                        definen los objetivos y se realiza un análisis preliminar de viabilidad
+                        Inicialemente se debe propiciar un espacio para la generación y análisis de ideas con el
+                        objetivo de identificar oportunidades prometedoras y alinearlas con los objetivos estratégicos
+                        de la organización
                     </p>
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                         data-bs-target="#definicion">
-                        Diligenciar
+                        Comenzar
                     </button>
                     <section class="my-3">
                         <div class="collapse" id="definicion">
@@ -49,19 +70,19 @@
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="idearecoleccion" data-bs-toggle="tab"
                                             data-bs-target="#idearecoleccion-pane" type="button" role="tab">
-                                            Fábrica de ideas
+                                            1. Fábrica de ideas
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="ideamodelo" data-bs-toggle="tab"
                                             data-bs-target="#ideamodelo-pane" type="button" role="tab">
-                                            Modelo de ponderación
+                                            2. Filtro de idea
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="ideadecision" data-bs-toggle="tab"
                                             data-bs-target="#ideadecision-pane" type="button" role="tab">
-                                            Decisión
+                                            <i class="bi bi-door-closed-fill"></i> 3. PUERTA1: (Revisión de idea)
                                         </button>
                                     </li>
                                 </ul>
@@ -81,20 +102,28 @@
                                                 </p>
                                                 <div class="form-floating">
                                                     <textarea class="form-control" id="descripcionidea"></textarea>
-                                                    <label for="floatingTextarea">descripcion</label>
+                                                    <label for="floatingTextarea">Descripción</label>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    3. ¿Cómo o quién originó la idea (fuente)?
+                                                    3. ¿Cómo se originó la idea?
                                                 </p>
                                                 <div class="form-floating">
-                                                    <textarea class="form-control" id="fuenteIdea"></textarea>
+                                                    <textarea class="form-control" id="fuenteIdeaComo"></textarea>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    4 Fecha
+                                                    4. ¿Quién originó la idea (fuente)?
+                                                </p>
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" id="fuenteIdeaQuien"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    5. Fecha
                                                 </p>
                                                 <input type="date" class="form-control" id="fechaIdea">
 
@@ -321,7 +350,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <button type="button" class="btn btn-success mt-2" id="botonseguiridea">SEGUIR
+                                        <button type="button" class="btn btn-success mt-2" id="botonseguiridea">ABRIR
+                                            PUERTA
                                             <i class="bi bi-door-open"></i></button>
                                         <button type="button" class="btn btn-danger mt-2" id="botonnoseguiridea">NO
                                             SEGUIR <i class="bi bi-trash"></i></button>
@@ -339,18 +369,20 @@
 
 
             <!--DOS-->
-
             <div class="row my-4 justify-content-center text-center shadow">
                 <div class="col-12 p-4">
-                    <h4>Puerta 2: Definición y Planificación</h4>
-                    <img src="./assets/img/plan.png" alt="plan" class="img-fluid mt-2">
-                    <p>Aquí se profundiza en la idea, se define el concepto del proyecto de manera más clara y se
+                    <h4>Etapa 1: Definición y Planificación (Alcance)</h4>
+                    <img src="./assets/img/alcance.png" alt="plan" class="img-fluid mt-2">
+                    <p>
+                        En esta etapa se profundiza en la idea, se define el concepto del proyecto de manera más clara y
+                        se
                         realiza una planificación preliminar. Se identifican los recursos necesarios, los riesgos
                         potenciales y las expectativas. La evaluación se centra en la viabilidad técnica, financiera y
-                        comercial</p>
+                        comercial
+                    </p>
                     <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#plan"
                         id="botonpuerta2" disabled>
-                        Diligenciar
+                        Iniciar Etapa
                     </button>
                     <section class="my-3">
                         <div class="collapse" id="plan">
@@ -359,16 +391,17 @@
                                 <ul class="nav nav-tabs" id="puerta2" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="proyecoespecificacion" data-bs-toggle="tab"
-                                            data-bs-target="#proyecoespecificacion-pane" type="button"
-                                            role="tab">Especificación del proyecto</button>
+                                            data-bs-target="#proyecoespecificacion-pane" type="button" role="tab">4.
+                                            Especificación del proyecto</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                                            data-bs-target="#profile-tab-pane" type="button"
-                                            role="tab">Decision</button>
+                                            data-bs-target="#profile-tab-pane" type="button" role="tab">
+                                            <i class="bi bi-door-closed-fill"></i> 5. PUERTA2: (Segunda revisión idea)
+                                        </button>
                                     </li>
                                 </ul>
-                                <div class="tab-content" id="puerta2Content">
+                                <div class="tab-content mt-5" id="puerta2Content">
                                     <div class="tab-pane fade show active" id="proyecoespecificacion-pane"
                                         role="tabpanel">
                                         <form>
@@ -578,15 +611,291 @@
                                             </div>
                                         </form>
                                         <button type="button" class="btn btn-success mt-2"
-                                            id="botonseguirproyecto">SEGUIR
+                                            id="botonseguirproyecto">ABRIR PUERTA
                                             <i class="bi bi-door-open"></i></button>
                                         <button type="button" class="btn btn-danger mt-2" id="botonnoseguirproyecto">NO
                                             SEGUIR <i class="bi bi-trash"></i></button>
-                                        <div class="alert alert-warning my-2 d-none" role="alert" id="mensajefinalproyecto">
+                                        <div class="alert alert-primary my-2 d-none" role="alert"
+                                            id="mensajefinalproyecto">
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <!--TRES-->
+            <div class="row my-4 justify-content-center text-center shadow">
+                <div class="col-12 p-4">
+                    <h4>Etapa 2: Construcción plan de negocio</h4>
+                    <img src="./assets/img/plan.png" alt="plan" class="img-fluid mt-2">
+                    <p>
+                        En esta etapa, se detallan los aspectos técnicos y de diseño del proyecto. Se realizan pruebas
+                        para verificar la viabilidad y la funcionalidad. Evaluando la calidad del diseño y si es
+                        adecuado para avanzar a la siguiente fase de desarrollo
+                    </p>
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#desarrollo"
+                        disabled id="botonpuerta3">
+                        Iniciar Etapa
+                    </button>
+                    <section class="my-3">
+                        <div class="collapse" id="desarrollo">
+                            <div class="card card-body">
+
+
+                                <ul class="nav nav-tabs" id="puerta3" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="factibilidad" data-bs-toggle="tab"
+                                            data-bs-target="#factibilidad-pane" type="button" role="tab">6.
+                                            Estudios de factibilidad</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="decision3-tab" data-bs-toggle="tab"
+                                            data-bs-target="#decision3-tab-pane" type="button" role="tab">7. <i
+                                                class="bi bi-door-closed-fill"></i> PUERTA3:
+                                            (Decisión de desarrollar) </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5" id="puerta2Content">
+                                    <div class="tab-pane fade show active" id="factibilidad-pane" role="tabpanel">
+                                        <form>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    1. Adjunte URL informe de viabilidad de fabricación:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informefabricacion">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    2. Adjunte URL estudios de mercado:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informemercados">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    3. Adjunte URL informe de factibilidad técnica:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control"
+                                                        id="informefactibilidadtecnica">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    4. Adjunte URL informe de factibilidad legal:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control"
+                                                        id="informefactibilidadlegal">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    5. Adjunte URL informe de factibilidad financiera:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control"
+                                                        id="informefactibilidfinanciera">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="decision3-tab-pane" role="tabpanel">
+                                        <form class="my-5">
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            1. ¿Se ha establecido una demanda clara para el concepto en
+                                                            el mercado?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres1" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres1" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            2. ¿Han sido verificadas las necesidades del cliente?
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres2" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres2" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            3. ¿La tecnología requerida y otras entradas están
+                                                            disponibles o son alcanzables?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres3" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres3" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            4. ¿Hay suficientes recursos disponibles?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres4" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres4" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            5. ¿Se han desarrollado proyectos que satisfacen las
+                                                            demandas del negocio?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres5" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres5" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            6. ¿Debería este proyecto seguir adelante para el
+                                                            desarrollo?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres6" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertatres6" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
+
+                                        </form>
+                                        <button type="button" class="btn btn-success mt-2"
+                                            id="botonseguirdesarrollo">ABRIR PUERTA
+                                            <i class="bi bi-door-open"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2"
+                                            id="botonnoseguirdesarrollo">NO
+                                            SEGUIR <i class="bi bi-trash"></i></button>
+                                        <div class="alert alert-primary my-2 d-none" role="alert"
+                                            id="mensajefinaldesarrollo">
+                                        </div>
                                     </div>
                                 </div>
 
@@ -599,86 +908,279 @@
 
 
 
-
-
-
-
-
-            <!--TRES-->
+            <!--CUATRO-->
             <div class="row my-4 justify-content-center text-center shadow">
                 <div class="col-12 p-4">
-                    <h4>Puerta 3: Desarrollo</h4>
-                    <img src="./assets/img/desarrollo.png" alt="plan" class="img-fluid mt-2">
-                    <p>En esta etapa, se detallan los aspectos técnicos y de diseño del proyecto. Se crean prototipos y
-                        se realizan pruebas para verificar la viabilidad y la funcionalidad. La puerta 3 evalúa la
-                        calidad del diseño y si es adecuado para avanzar a la siguiente fase de desarrollo</p>
-                    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#desarrollo"
-                        disabled id="botonpuerta3">
-                        Diligenciar
-                    </button>
-                    <section class="my-3">
-                        <div class="collapse" id="desarrollo">
-                            <div class="card card-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <p class="form-label fw-bold text-start">1. Escribe el objetivo del proyecto:
-                                        </p>
-                                        <input type="text" class="form-control" id="objetivo">
-                                    </div>
-                                    <div class="mb-3">
-                                        <p class="form-label fw-bold text-start">1. Escribe el objetivo del proyecto:
-                                        </p>
-                                        <input type="text" class="form-control" id="objetivo">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-
-            <div class="row my-4 justify-content-center text-center shadow">
-                <div class="col-12 p-4">
-                    <h4>Puerta 4: Pruebas y Validación</h4>
-                    <img src="./assets/img/prueba.png" alt="prueba" class="img-fluid mt-2">
-                    <p>Aquí se lleva a cabo una fase de pruebas más exhaustiva para verificar la funcionalidad y el
-                        rendimiento del proyecto. Se realizan pruebas de mercado y se busca validar la propuesta ante
-                        los usuarios finales. La decisión en esta puerta se basa en la aceptación del mercado y en los
-                        resultados de las pruebas.</p>
+                    <h4>Etapa 3: Desarrollo</h4>
+                    <img src="./assets/img/desarrollo.png" alt="prueba" class="img-fluid mt-2">
+                    <p>
+                        En esta etapa se crean prototipos y se refinan los detalles del diseño, incluyendo el hardware y
+                        el software, además se realizan pruebas técnicas en el laboratorio para garantizar que el que el
+                        proyecto funcione correctamente y cumpla con los estándares de calidad.
+                    </p>
                     <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#prueba"
-                        disabled>
-                        Diligenciar
+                        disabled id="botonpuerta4">
+                        Iniciar Etapa
                     </button>
                     <section class="my-3">
                         <div class="collapse" id="prueba">
                             <div class="card card-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <p class="form-label fw-bold text-start">1. Escribe el objetivo del proyecto:
-                                        </p>
-                                        <input type="text" class="form-control" id="objetivo">
+                                <ul class="nav nav-tabs" id="puerta4" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="registros" data-bs-toggle="tab"
+                                            data-bs-target="#registros-pane" type="button" role="tab">8.
+                                            Estudios de registros</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="decision4-tab" data-bs-toggle="tab"
+                                            data-bs-target="#decision4-tab-pane" type="button" role="tab">9. <i
+                                                class="bi bi-door-closed-fill"></i> PUERTA 4:
+                                            (Decisión de aprobar) </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-5" id="puerta2Content">
+                                    <div class="tab-pane fade show active" id="registros-pane" role="tabpanel">
+                                        <form>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    1. Adjunte URL informe proceso de fabricación:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informefabricacion">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    2. Adjunte URL informe registro del desarrollo del proyecto:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informedesarrollo">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    3. Adjunte URL registro de pruebas internas:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informepruebaspiloto">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    4. Adjunte URL informe propuestas de lanzamiento y fabricación:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informelanzamiento">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <p class="form-label fw-bold text-start">
+                                                    5. Adjunte URL informe reacción inicial del cliente:
+                                                </p>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="bi bi-link-45deg"></i></span>
+                                                    <input type="text" class="form-control" id="informereaccionpublico">
+                                                </div>
+                                            </div>
+
+                                        </form>
                                     </div>
-                                    <div class="mb-3">
-                                        <p class="form-label fw-bold text-start">1. Escribe el objetivo del proyecto:
-                                        </p>
-                                        <input type="text" class="form-control" id="objetivo">
+                                    <div class="tab-pane fade" id="decision4-tab-pane" role="tabpanel">
+                                        <form class="my-5">
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            1. ¿Se desarrollaron los planos de los prototipos?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro1" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro1" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            2. ¿Se desarrollaron los prototipos?
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro2" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro2" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            3. ¿El producto cumple con la calidad esperada por la
+                                                            empresa?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro3" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro3" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            4. ¿Se evaluó la reacción inicial del cliente?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro4" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro4" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-md-3">
+                                                    <div class="mb-3">
+                                                        <p class="form-label fw-bold">
+                                                            5. ¿Se realizaron planes de fabricación?:
+                                                        </p>
+                                                        <div class="form-check form-check-inline justify-content-start">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro5" value="option1" checked>
+                                                            <label class="form-check-label">SI</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="puertacuatro5" value="option2">
+                                                            <label class="form-check-label">NO</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"></textarea>
+                                                        <label for="floatingTextarea">Comentario</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <button type="button" class="btn btn-success mt-2"
+                                            id="botonseguirprototipo">ABRIR PUERTA
+                                            <i class="bi bi-door-open"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2" id="botonnoseguirprototipo">NO
+                                            SEGUIR <i class="bi bi-trash"></i></button>
+                                        <div class="alert alert-primary my-2 d-none" role="alert"
+                                            id="mensajefinalprototipo">
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
 
+
+            <!--CINCO-->
             <div class="row my-4 justify-content-center text-center shadow">
                 <div class="col-12 p-4">
-                    <h4>Puerta 5: Lanzamiento y Comercialización</h4>
+                    <h4>Etapa 4: Pruebas y Validación</h4>
+                    <img src="./assets/img/prueba.png" alt="lanzo" class="img-fluid mt-2">
+                    <p>
+                        En esta etapa se lleva a cabo una fase de pruebas más exhaustiva para verificar la funcionalidad
+                        y el rendimiento del proyecto. Se realizan pruebas de mercado y se busca validar la propuesta
+                        ante los usuarios finales. La decisión en esta puerta se basa en la aceptación del mercado y en
+                        los resultados de las pruebas.
+                    </p>
+                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#lanzo"
+                        disabled id="botonpuerta5">
+                        Diligenciar
+                    </button>
+                    <section class="my-3">
+                        <div class="collapse" id="lanzo">
+                            <div class="card card-body">
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!--SEIS-->
+            <div class="row my-4 justify-content-center text-center shadow">
+                <div class="col-12 p-4">
+                    <h4>Etapa 5: Lanzamiento y Comercialización</h4>
                     <img src="./assets/img/lanzamiento.png" alt="lanzo" class="img-fluid mt-2">
                     <p>En esta etapa final, el proyecto se lanza al mercado. Se implementa la estrategia de
-                        comercialización y se monitorea el rendimiento y la retroalimentación. La puerta 5 evalúa si se
-                        lograron los resultados esperados y si el proyecto es sostenible en el mercado.</p>
-                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#lanzo"
+                        comercialización y se monitorea el rendimiento y la retroalimentación, también se evalúa si se
+                        lograron los resultados esperados y si el proyecto es sostenible en el mercado</p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#lanzo"
                         disabled>
                         Diligenciar
                     </button>
@@ -704,6 +1206,13 @@
             </div>
 
 
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-8">
+                    <h5>Wilmer Londoño&copy;-Juan José Gallego&copy;</h5>
+                    <h6>Maestria gestión de la innovación tecnológica cooperación y desarrollo regional</h6>
+                    <h6>ITM-2023</h6>
+                </div>
+            </div>
 
 
         </div>
@@ -716,6 +1225,8 @@
 
     <script type="module" src="./controllers/controladorPuerta1.js"></script>
     <script type="module" src="./controllers/controladorPuerta2.js"></script>
+    <script type="module" src="./controllers/controladorPuerta3.js"></script>
+    <script type="module" src="./controllers/controladorPuerta4.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

@@ -3,7 +3,8 @@ import {formatearTabla} from '../helpers/formateadorTabla.js'
 
 let nombreIdea = document.getElementById("nombreIdea")
 let descripcionIdea = document.getElementById("descripcionidea")
-let fuenteIdea = document.getElementById("fuenteIdea")
+let fuenteIdea = document.getElementById("fuenteIdeaComo")
+let fuenteIdeaPersona = document.getElementById("fuenteIdeaQuien")
 let fechaIdea = document.getElementById("fechaIdea")
 
 let nombreIdeaPuntuacion = document.getElementById("nombreIdeaPuntuacion")
@@ -33,6 +34,7 @@ fechaIdea.value = fechaSistema
 nombreIdea.addEventListener("input", validarEscritura)
 descripcionIdea.addEventListener("input", validarEscritura)
 fuenteIdea.addEventListener("input", validarEscritura)
+fuenteIdeaPersona.addEventListener("input", validarEscritura)
 fechaIdea.addEventListener("input", validarEscritura)
 function validarEscritura() {
     nombreIdeaPuntuacion.textContent = "Idea: " + nombreIdea.value
