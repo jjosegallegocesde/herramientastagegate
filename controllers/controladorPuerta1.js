@@ -1,6 +1,3 @@
-import {obtenerTabla} from '../helpers/jsonTOtabla.js'
-import {formatearTabla} from '../helpers/formateadorTabla.js'
-
 let nombreIdea = document.getElementById("nombreIdea")
 let descripcionIdea = document.getElementById("descripcionidea")
 let fuenteIdea = document.getElementById("fuenteIdeaComo")
@@ -106,6 +103,10 @@ botonContinuaridea.addEventListener("click",function(){
     mensajeFinalIdea.classList.remove("d-none")
     mensajeFinalIdea.textContent="Es un gran logro haber registrado con éxito tu idea de innovación. Esto marca el comienzo de un emocionante viaje hacia la creación y desarrollo de algo único y valioso. Tu creatividad y visión nos inspiran a todos"
     botonPuerta2.disabled=false
+
+
+
+
 
 })
 
