@@ -97,6 +97,17 @@ function validarPonderacion() {
 
 
 let botonPuerta2=document.getElementById("botonpuerta2")
+let habilitador2=document.getElementById("habilitador2")
+habilitador2.addEventListener("click",function(evento){
+    if (botonPuerta2.disabled) {
+        Swal.fire(
+            'Debes aprobar la puerta de la etapa anterior para continuar',
+            '',
+            'warning'
+          )
+    }
+})
+
 
 //seguir idea
 botonContinuaridea.addEventListener("click",function(){

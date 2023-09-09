@@ -7,7 +7,7 @@ export function formatearTabla(tableHTML) {
     tableRows.forEach(row => {
         const rowData = [];
         row.querySelectorAll('td').forEach(cell => {
-            if (cell.innerText === "sin" || cell.innerText === "sin1" || cell.innerText === "sin2" || cell.innerText === "sin3" || cell.innerText === "sin4" || cell.innerText === "sin5") {
+            if (cell.innerText === "sin" || cell.innerText === "sin1" || cell.innerText === "sin2" || cell.innerText === "sin3" || cell.innerText === "sin4" || cell.innerText === "sin5"|| cell.innerText === "sin6") {
                 rowData.push({ text: cell.innerText, fillColor: 'black' }); // Cambia 'black' al color que desees
             } else if (cell.innerText.startsWith('http://') || cell.innerText.startsWith('https://')) {
                 // Si el valor de la celda es un URL, crea un objeto con un enlace

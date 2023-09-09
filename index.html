@@ -9,7 +9,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -37,14 +37,15 @@
                         <i class="bi bi-caret-right-fill"></i>Para utilizar la herramienta debes hacer clic en comenzar
                         <span class="fw-bold">e ir pasando por cada una de las etapas</span>.
                     </p>
-    
+
                     <p class="mt-2 animate__animated animate__backInRight">
-                        <i class="bi bi-caret-right-fill"></i>Recuerda que <span class="fw-bold">debes aprobar ("abrir la puerta") </span> de una etapa
+                        <i class="bi bi-caret-right-fill"></i>Recuerda que <span class="fw-bold">debes aprobar ("abrir
+                            la puerta") </span> de una etapa
                         para poder continuar a la siguiente
                     </p>
                 </div>
 
-                
+
 
 
 
@@ -380,10 +381,17 @@
                         potenciales y las expectativas. La evaluación se centra en la viabilidad técnica, financiera y
                         comercial
                     </p>
-                    <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#plan"
-                        id="botonpuerta2" disabled>
-                        Iniciar Etapa
-                    </button>
+
+                    <div id="habilitador2">
+                        <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#plan"
+                            id="botonpuerta2" disabled>
+                            Iniciar Etapa
+                        </button>
+                    </div>
+
+
+
+
                     <section class="my-3">
                         <div class="collapse" id="plan">
                             <div class="card card-body">
@@ -468,7 +476,8 @@
                                                 </p>
                                                 <select class="form-select" id="innovacionproyecto">
                                                     <option selected value="0">Innovación incremental</option>
-                                                    <option value="Innovación de Producto">Innovación de Producto</option>
+                                                    <option value="Innovación de Producto">Innovación de Producto
+                                                    </option>
                                                     <option value="Innovación de Proceso">Innovación de Proceso</option>
                                                     <option value="Innovación Social">Innovación Social</option>
                                                     <option value="Innovación Abierta">Innovación Abierta</option>
@@ -627,10 +636,13 @@
                         para verificar la viabilidad y la funcionalidad. Evaluando la calidad del diseño y si es
                         adecuado para avanzar a la siguiente fase de desarrollo
                     </p>
-                    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#desarrollo"
-                        disabled id="botonpuerta3">
-                        Iniciar Etapa
-                    </button>
+                    <div id="habilitador3">
+                        <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#desarrollo" disabled id="botonpuerta3">
+                            Iniciar Etapa
+                        </button>
+
+                    </div>
                     <section class="my-3">
                         <div class="collapse" id="desarrollo">
                             <div class="card card-body">
@@ -908,10 +920,13 @@
                         el software, además se realizan pruebas técnicas en el laboratorio para garantizar que el que el
                         proyecto funcione correctamente y cumpla con los estándares de calidad.
                     </p>
-                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#prueba"
-                        disabled id="botonpuerta4">
-                        Iniciar Etapa
-                    </button>
+                    <div id="habilitador4">
+                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#prueba"
+                            disabled id="botonpuerta4">
+                            Iniciar Etapa
+                        </button>
+                    </div>
+
                     <section class="my-3">
                         <div class="collapse" id="prueba">
                             <div class="card card-body">
@@ -933,27 +948,18 @@
                                         <form>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    1. Adjunte URL informe proceso de fabricación:
+                                                    1. Adjunte URL informe registro del desarrollo del proyecto:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
                                                             class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="informefabricacion">
+                                                    <input type="text" class="form-control"
+                                                        id="informedesarrolloproyecto">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    2. Adjunte URL informe registro del desarrollo del proyecto:
-                                                </p>
-                                                <div class="input-group mb-3">
-                                                    <span class="input-group-text"><i
-                                                            class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="informedesarrollo">
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <p class="form-label fw-bold text-start">
-                                                    3. Adjunte URL registro de pruebas internas:
+                                                    2. Adjunte URL registro de pruebas internas:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
@@ -963,17 +969,18 @@
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    4. Adjunte URL informe propuestas de lanzamiento y fabricación:
+                                                    3. Adjunte URL informe propuestas de lanzamiento:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
                                                             class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="informelanzamiento">
+                                                    <input type="text" class="form-control"
+                                                        id="informepropuestalanzamiento">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    5. Adjunte URL informe reacción inicial del cliente:
+                                                    4. Adjunte URL informe reacción inicial del cliente:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
@@ -1148,10 +1155,13 @@
                         ante los usuarios finales. La decisión en esta puerta se basa en la aceptación del mercado y en
                         los resultados de las pruebas.
                     </p>
-                    <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#lanzo"
-                        disabled id="botonpuerta5">
-                        Iniciar Etapa
-                    </button>
+                    <div id="habilitador5">
+                        <button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#lanzo"
+                            disabled id="botonpuerta5">
+                            Iniciar Etapa
+                        </button>
+                    </div>
+
                     <section class="my-3">
                         <div class="collapse" id="lanzo">
                             <div class="card card-body">
@@ -1173,13 +1183,7 @@
                                         <form>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    1. Código del producto:
-                                                </p>
-                                                <input type="text" class="form-control" id="codigoProducto">
-                                            </div>
-                                            <div class="mb-3">
-                                                <p class="form-label fw-bold text-start">
-                                                    2. Adjunte URL informe registro de pruebas de campo por cliente:
+                                                    1. Adjunte URL informe registro de pruebas de campo por cliente:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
@@ -1189,7 +1193,7 @@
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    3. Adjunte URL registro de pruebas de mercado:
+                                                    2. Adjunte URL registro de pruebas de mercado:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
@@ -1199,17 +1203,18 @@
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    4. Adjunte URL informe de producción general:
+                                                    3. Adjunte URL informe de producción general:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
                                                             class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="informeproducciongeneral">
+                                                    <input type="text" class="form-control"
+                                                        id="informeproducciongeneral">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    5. Adjunte URL plan de lanzamiento:
+                                                    4. Adjunte URL plan de lanzamiento:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
@@ -1219,32 +1224,23 @@
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    6. Adjunte URL especificaciones finales del nuevo producto:
+                                                    5. Adjunte URL especificaciones finales del nuevo producto:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
                                                             class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="informeespecificacionesfinales">
+                                                    <input type="text" class="form-control"
+                                                        id="informeespecificacionesfinales">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <p class="form-label fw-bold text-start">
-                                                    7. Adjunte URL registro del desarrollo del proceso:
+                                                    6. Adjunte URL planes de ciclo de vida del producto:
                                                 </p>
                                                 <div class="input-group mb-3">
                                                     <span class="input-group-text"><i
                                                             class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="especificacionesdesarrolloproceso">
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <p class="form-label fw-bold text-start">
-                                                    8. Adjunte URL planes de ciclo de vida del producto:
-                                                </p>
-                                                <div class="input-group mb-3">
-                                                    <span class="input-group-text"><i
-                                                            class="bi bi-link-45deg"></i></span>
-                                                    <input type="text" class="form-control" id="especificacionesdesarrolloproceso">
+                                                    <input type="text" class="form-control" id="ciclovidareporte">
                                                 </div>
                                             </div>
                                         </form>
@@ -1336,7 +1332,8 @@
                                                 <div class="col-12 col-md-3">
                                                     <div class="mb-3">
                                                         <p class="form-label fw-bold">
-                                                            4. ¿Se han vuelto a verificar los objetivos comerciales y estratégicos?:
+                                                            4. ¿Se han vuelto a verificar los objetivos comerciales y
+                                                            estratégicos?:
                                                         </p>
                                                         <div class="form-check form-check-inline justify-content-start">
                                                             <input class="form-check-input" type="radio"
@@ -1409,10 +1406,14 @@
                     <p>En esta etapa final, el proyecto se lanza al mercado. Se implementa la estrategia de
                         comercialización y se monitorea el rendimiento y la retroalimentación, también se evalúa si se
                         lograron los resultados esperados y si el proyecto es sostenible en el mercado</p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#final"
-                         id="botonpuerta6">
-                        Iniciar Etapa
-                    </button>
+                    <div id="habilitador6">
+                        <button disabled class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#final" id="botonpuerta6">
+                            Iniciar Etapa
+                        </button>
+
+                    </div>
+
                     <section class="my-3">
                         <div class="collapse" id="final">
                             <div class="card card-body">
@@ -1422,9 +1423,9 @@
                                             1. Adjunte URL informe presentación del producto en el mercado:
                                         </p>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text"><i
-                                                    class="bi bi-link-45deg"></i></span>
-                                            <input type="text" class="form-control" id="informePresentacionmercadofinal">
+                                            <span class="input-group-text"><i class="bi bi-link-45deg"></i></span>
+                                            <input type="text" class="form-control"
+                                                id="informePresentacionmercadofinal">
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -1432,8 +1433,7 @@
                                             2. Adjunte URL plan de post lanzamiento:
                                         </p>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text"><i
-                                                    class="bi bi-link-45deg"></i></span>
+                                            <span class="input-group-text"><i class="bi bi-link-45deg"></i></span>
                                             <input type="text" class="form-control" id="postlanzamiento">
                                         </div>
                                     </div>
@@ -1442,9 +1442,8 @@
                                             3. Adjunte URL registro ciclo de vida del producto en marcha:
                                         </p>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text"><i
-                                                    class="bi bi-link-45deg"></i></span>
-                                            <input type="text" class="form-control" id="informeproducciongeneral">
+                                            <span class="input-group-text"><i class="bi bi-link-45deg"></i></span>
+                                            <input type="text" class="form-control" id="productoenmarcha">
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -1452,9 +1451,10 @@
                                             4. Comentarios generales:
                                         </p>
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Comentarios" id="comentariosgenerales"></textarea>
+                                            <textarea class="form-control" placeholder="Comentarios"
+                                                id="comentariosgenerales"></textarea>
                                             <label for="floatingTextarea">Comentarios</label>
-                                          </div>
+                                        </div>
                                     </div>
                                     <div class="mb-3 d-none d-md-block">
                                         <p class="form-label fw-bold text-start">
@@ -1462,93 +1462,115 @@
                                         </p>
                                         <table class="table table-striped w-100">
                                             <thead>
-                                              <tr>
-                                                <th scope="col">Parametros evaluados</th>
-                                                <th scope="col">Especificacion</th>
-                                                <th scope="col">Resultado</th>
-                                                <th scope="col">Estado</th>
-                                              </tr>
+                                                <tr>
+                                                    <th scope="col">Parametros evaluados</th>
+                                                    <th scope="col">Especificacion</th>
+                                                    <th scope="col">Resultado</th>
+                                                    <th scope="col">Estado</th>
+                                                </tr>
                                             </thead>
                                             <tbody>
-                                              <tr>
-                                                <td>
-                                                    <input type="text" class="form-control" id="control1" placeholder="Parámetro">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control" id="espec1" placeholder="Especificación">
-                                                </td>
-                                                <td>
-                                                    <div class="form-floating">
-                                                        <textarea class="form-control" placeholder="Resultado" id="resultado1"></textarea>
-                                                        <label for="floatingTextarea">Resultado</label>
-                                                      </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline">
-                                                        <input checked class="form-check-input" type="radio" name="cumple1" id="radio11" value="option1">
-                                                        <label class="form-check-label" for="inlineRadio1">Cumple</label>
-                                                      </div>
-                                                      <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="cumple1" id="radio12" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">No cumple</label>
-                                                      </div>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                    <input type="text" class="form-control" id="control2" placeholder="Parámetro">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control" id="espec2" placeholder="Especificación">
-                                                </td>
-                                                <td>
-                                                    <div class="form-floating">
-                                                        <textarea class="form-control" placeholder="Resultado" id="resultado2"></textarea>
-                                                        <label for="floatingTextarea">Resultado</label>
-                                                      </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline">
-                                                        <input checked class="form-check-input" type="radio" name="cumple2" id="radio21" value="option1">
-                                                        <label class="form-check-label" for="inlineRadio1">Cumple</label>
-                                                      </div>
-                                                      <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="cumple2" id="radio22" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">No cumple</label>
-                                                      </div>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td>
-                                                    <input type="text" class="form-control" id="control3" placeholder="Parámetro">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control" id="espec3" placeholder="Especificación">
-                                                </td>
-                                                <td>
-                                                    <div class="form-floating">
-                                                        <textarea class="form-control" placeholder="Resultado" id="resultado3"></textarea>
-                                                        <label for="floatingTextarea">Resultado</label>
-                                                      </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline">
-                                                        <input checked class="form-check-input" type="radio" name="cumple3" id="radio31" value="option1">
-                                                        <label class="form-check-label" for="inlineRadio1">Cumple</label>
-                                                      </div>
-                                                      <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="cumple3" id="radio32" value="option2">
-                                                        <label class="form-check-label" for="inlineRadio2">No cumple</label>
-                                                      </div>
-                                                </td>
-                                              </tr>
-                                              
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="control1"
+                                                            placeholder="Parámetro">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="espec1"
+                                                            placeholder="Especificación">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control" placeholder="Resultado"
+                                                                id="resultado1"></textarea>
+                                                            <label for="floatingTextarea">Resultado</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input checked class="form-check-input" type="radio"
+                                                                name="cumple1" id="radio11" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio1">Cumple</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="cumple1"
+                                                                id="radio12" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">No
+                                                                cumple</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="control2"
+                                                            placeholder="Parámetro">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="espec2"
+                                                            placeholder="Especificación">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control" placeholder="Resultado"
+                                                                id="resultado2"></textarea>
+                                                            <label for="floatingTextarea">Resultado</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input checked class="form-check-input" type="radio"
+                                                                name="cumple2" id="radio21" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio1">Cumple</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="cumple2"
+                                                                id="radio22" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">No
+                                                                cumple</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="control3"
+                                                            placeholder="Parámetro">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" id="espec3"
+                                                            placeholder="Especificación">
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control" placeholder="Resultado"
+                                                                id="resultado3"></textarea>
+                                                            <label for="floatingTextarea">Resultado</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input checked class="form-check-input" type="radio"
+                                                                name="cumple3" id="radio31" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineRadio1">Cumple</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="cumple3"
+                                                                id="radio32" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">No
+                                                                cumple</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
                                             </tbody>
-                                          </table>
+                                        </table>
                                     </div>
 
-                                    <button class="btn btn-outline-danger w-100" type="button" id="reportefinal">Generar reporte final <i class="bi bi-file-earmark-pdf"></i></button>
-                                    
+                                    <button class="btn btn-outline-danger w-100" type="button" id="reportefinal">Generar
+                                        reporte final <i class="bi bi-file-earmark-pdf"></i></button>
+
                                 </form>
                             </div>
                         </div>
@@ -1570,8 +1592,11 @@
     </main>
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <script type="module" src="./controllers/controladorPuerta1.js"></script>

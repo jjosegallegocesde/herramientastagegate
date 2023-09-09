@@ -4,6 +4,20 @@ let mensajeFinalProyecto=document.getElementById("mensajefinalproyecto")
 
 
 let botonPuerta3=document.getElementById("botonpuerta3")
+let habilitador3=document.getElementById("habilitador3")
+habilitador3.addEventListener("click",function(evento){
+    
+    if (botonPuerta3.disabled) {
+        Swal.fire(
+            'Debes aprobar la puerta de la etapa anterior para continuar',
+            '',
+            'warning'
+          )
+    }
+
+})
+
+
 //seguir idea
 botonContinuarProyecto.addEventListener("click",function(){
     mensajeFinalProyecto.classList.remove("d-none")

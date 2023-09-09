@@ -4,7 +4,6 @@ import {formatearTabla} from '../helpers/formateadorTabla.js'
 
 
 
-
 let boton = document.getElementById("reportefinal")
 boton.addEventListener("click", function () {
 
@@ -34,7 +33,25 @@ boton.addEventListener("click", function () {
     let reporteinformefactibilidadlegal = document.getElementById("informefactibilidadlegal").value
     let reporteinformefactibilidfinanciera = document.getElementById("informefactibilidfinanciera").value
 
+    //etapa4
+    let reporteinformedesarrolloproyecto = document.getElementById("informedesarrolloproyecto").value
+    let reporteinformepruebaspiloto = document.getElementById("informepruebaspiloto").value
+    let reporteinformepropuestalanzamiento = document.getElementById("informepropuestalanzamiento").value
+    let reporteinformereaccionpublico = document.getElementById("informereaccionpublico").value
 
+    //etapa5
+    let reporteinformepruebascampo = document.getElementById("pruebascampo").value
+    let reporteinformepruebasmercado = document.getElementById("pruebasmercado").value
+    let reporteinformeproducciongeneral = document.getElementById("informeproducciongeneral").value
+    let reporteinformeplanlanzamiento = document.getElementById("informeplanlanzamiento").value
+    let reporteinformeespecificacionesfinales = document.getElementById("informeespecificacionesfinales").value
+    let reporteinformeciclovidareporte = document.getElementById("ciclovidareporte").value
+
+    //etapa6
+    let reporteinformePresentacionmercadofinal = document.getElementById("informePresentacionmercadofinal").value
+    let reporteinformepostlanzamiento = document.getElementById("postlanzamiento").value
+    let reporteinformeproductoenmarcha = document.getElementById("productoenmarcha").value
+    let reportecomentariosgenerales = document.getElementById("comentariosgenerales").value
 
 
     // Tu objeto JSON
@@ -43,7 +60,7 @@ boton.addEventListener("click", function () {
         "Descripción idea:": reportedescripcionIdea,
         "Fuente de la idea":reportefuenteIdeaPersona,
         "Fecha de registro": reportefechaIdea,
-        "Puntuación idea":reportetotalPonderado,
+        "Puntuación idea":reportetotalPonderado+"/28",
         "sin1":"sin",
         "Nombre del proyecto":reportenombreproyecto,
         "Objetivo del proyecto":reporteobjetivoProyecto,
@@ -53,12 +70,32 @@ boton.addEventListener("click", function () {
         "Responsable del proyecto":reporteresponsableProyecto,
         "Tipo de innovación que desarrolla el proyecto":reporteinnovacionproyecto,
         "sin2":"sin",
-        "Informe de fabricación":reporteinformefabricacion,
-        "Informe de mercados":reporteinformemercados,
+        "Informe de factibilidad de fabricación":reporteinformefabricacion,
+        "Informe de factibilidad de mercados":reporteinformemercados,
         "Informe de factibilidad técnica":reporteinformefactibilidadtecnica,
         "Informe de factibilidad legal":reporteinformefactibilidadlegal,
         "Informe de factibilidad financiera":reporteinformefactibilidfinanciera,
         "sin3":"sin",
+        "Registro del desarrollo del proyecto":reporteinformedesarrolloproyecto,
+        "Registro de pruebas internas":reporteinformepruebaspiloto,
+        "Registro de propuesta de lanzamiento":reporteinformepropuestalanzamiento,
+        "Registro de reaccion inicial del público":reporteinformereaccionpublico,
+        "sin4":"sin",
+        "Informe de pruebas de campo":reporteinformepruebascampo,
+        "Informe de pruebas de mercado":reporteinformepruebasmercado,
+        "Informe de producción general":reporteinformeproducciongeneral,
+        "Informe de ciclo de vida del producto":reporteinformeciclovidareporte,
+        "Especificaciones finales dle producto":reporteinformeespecificacionesfinales,
+        "Plan de lanzamiento":reporteinformeplanlanzamiento,
+        "sin5":"sin",
+        "Informe de presentación del producto en el mercado":reporteinformePresentacionmercadofinal,
+        "Informe de ciclod e vida del rpoducto en marcha":reporteinformeproductoenmarcha,
+        "Plan de postlanzamiento":reporteinformepostlanzamiento,
+        "sin6": "sin",
+        "Comentarios generales":reportecomentariosgenerales
+        
+        
+       
        
 
     };
